@@ -6,11 +6,27 @@ This documentation provides an overview of the cloud-oriented web application de
 ## Installation
 1. **Download Docker Desktop**: Install Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
 2. **Install Ubuntu**: Follow the instructions [here](https://ubuntu.com/tutorials/install-ubuntu-desktop#7-ready-to-install) to install Ubuntu.
-3. **Install Laravel 10 PHP Framework (Version 8.2)**: Laravel can be installed using the following command:
-    ```bash
-    curl -s https://laravel.build/virtual-laravel | bash
-    ```
-4. **Run Docker**: Run Docker on your system.
+3. **Run Docker**: Run Docker on your system.
+4. **Start Docker Containers**:
+   - Navigate to the project directory.
+   - Run the following command in Ubuntu to start Docker containers and install dependencies:
+     ```bash
+     ./vendor/bin/sail up
+     ```
+   - This command will install the project and its dependencies using Laravel Sail, which provides a Docker-powered local development environment.
+   - Close the terminal window after the containers are up and running by pressing `Ctrl + C`.
+5. **Run Docker Compose**:
+   - After closing the terminal, run the following command to start the containers again using Docker Compose:
+     ```bash
+     docker-compose up
+     ```
+   - This command will ensure that your Docker containers continue to run in the background.
+6. **Run Database Migrations and Seed Data**:
+   - Once the containers are up and running, run the following command in a separate Ubuntu terminal to migrate the database schema and seed it with initial data:
+     ```bash
+     php artisan migrate --seed
+     ```
+   - This command will ensure that your database is properly configured and populated with the necessary data for the application to function.
 
 ## Project Structure
 The project utilizes Docker containers to manage its components. The key components include:
