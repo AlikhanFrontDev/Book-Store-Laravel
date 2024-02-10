@@ -7,7 +7,13 @@ This documentation provides an overview of the cloud-oriented web application de
 1. **Download Docker Desktop**: Install Docker Desktop from [here](https://www.docker.com/products/docker-desktop/).
 2. **Install Ubuntu**: Follow the instructions [here](https://ubuntu.com/tutorials/install-ubuntu-desktop#7-ready-to-install) to install Ubuntu.
 3. **Run Docker**: Run Docker on your system.
-4. **Start Docker Containers**:
+4. **Set Permissions**:
+   - Before starting Docker containers, ensure that the project directory has the correct permissions. Run the following command in Ubuntu to set permissions recursively:
+     ```bash
+     chmod -R 755 .
+     ```
+   - This command will ensure that all files and directories in the project directory have the appropriate permissions for execution.
+5. **Start Docker Containers**:
    - Navigate to the project directory.
    - Run the following command in Ubuntu to start Docker containers and install dependencies:
      ```bash
@@ -15,13 +21,13 @@ This documentation provides an overview of the cloud-oriented web application de
      ```
    - This command will install the project and its dependencies using Laravel Sail, which provides a Docker-powered local development environment.
    - Close the terminal window after the containers are up and running by pressing `Ctrl + C`.
-5. **Run Docker Compose**:
+6. **Run Docker Compose**:
    - After closing the terminal, run the following command to start the containers again using Docker Compose:
      ```bash
      docker-compose up
      ```
    - This command will ensure that your Docker containers continue to run in the background.
-6. **Run Database Migrations and Seed Data**:
+7. **Run Database Migrations and Seed Data**:
    - Once the containers are up and running, run the following command in a separate Ubuntu terminal to migrate the database schema and seed it with initial data:
      ```bash
      php artisan migrate --seed
