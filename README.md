@@ -33,6 +33,8 @@ This documentation provides an overview of the cloud-oriented web application de
      php artisan migrate --seed
      ```
    - This command will ensure that your database is properly configured and populated with the necessary data for the application to function.
+9. **Open Localhost**:
+   - Once everything is set up, open your web browser and go to `http://localhost` to access the running project.
 
 ## Project Structure
 The project utilizes Docker containers to manage its components. The key components include:
