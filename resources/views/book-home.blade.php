@@ -5,6 +5,7 @@
     <div class="row">
         <h1 class="text-info text-center py-2 my-2">Our Books</h1>
             @if(count($books))
+            <!-- jnerdf,bgdfkjdfk -->
                 @foreach ($books as $book)
                     <div class=" col-12  col-md-4 col-xl-3 mt-3" >
                     <div class="card" style="width: 18rem;">
